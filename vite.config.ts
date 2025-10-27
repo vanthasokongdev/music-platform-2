@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   base: '/music-platform-2/',
+  build: { outDir: 'dist' },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
